@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+
+<title>Project name</title>
+
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="dist/assets/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+<link href="dist/dashboard.css" rel="stylesheet">
+<script src="dist/assets/js/ie-emulation-modes-warning.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="dist/js/controller.js"></script>
+</head>
+
+<body ng-app="ProductManagement" ng-controller="ProductManagementController">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Company</a></li>
+					<li><a href="#">Plan</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Product</a></li>
+					<li><a href="#">Groups</a></li>
+					<li><a href="#">New product</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Project name</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="row">
+					<h1 class="page-header">
+						<img width="70" src="icons/icon_add.png"> Products
+					</h1>
+
+				</div>
+				<h2 class="sub-header">Registering product</h2>
+				<div id="alertAnswer" role="alert"></div>
+				<form ng-submit="submitProduct()">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-6">
+								<p>Name :</p>
+								<input ng-model="form.nameProduct" type="text"
+									placeholder="Enter name" class="form-control" required />
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-6 controls">
+								<p>Description :</p>
+								<input type="text" placeholder="Enter description"
+									class="form-control" required />
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<button type="submit" class="btn btn-success">Save</button>
+								<button type="submit" class="btn btn-warning">Clear
+									form</button>
+							</div>
+						</div>
+						<br>
+						<h2 class="sub-header">Products saved</h2>
+						<table class="table table-bordered">
+							<tr>
+								<th>Name</th>
+								<th>Address</th>
+								<th>Age</th>
+								<th>Gender</th>
+								<th>Stream</th>
+							</tr>
+
+							<tr>
+								<td>Sample Name1</td>
+								<td>Address 1</td>
+								<td>12</td>
+								<td>Male</td>
+								<td>M1</td>
+							</tr>
+							<tr>
+								<td>Sample Name1</td>
+								<td>Address 1</td>
+								<td>12</td>
+								<td>Male</td>
+								<td>M1</td>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div align="center" class="container">
+				<div class="footer">
+					<p>© Copyright 2016-2016</p>
+				</div>
+			</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="dist/assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#alertAnswer").hide();
+
+		})
+	</script>
+	<script src="dist/js/bootstrap.min.js"></script>
+	<script src="dist/assets/js/vendor/holder.min.js"></script>
+	<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
