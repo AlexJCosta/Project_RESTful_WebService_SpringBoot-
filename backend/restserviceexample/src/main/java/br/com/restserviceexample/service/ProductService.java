@@ -8,13 +8,11 @@ import br.com.restserviceexample.model.Product;
 
 @Service
 public class ProductService {
-	
 	@Autowired
 	ProductRepository productRepository;
-
+	
 	public void saveProduct(Product product) {
-		productRepository.save(product);
-		
+		this.productRepository.save(product);
 	}
 
 }
